@@ -1,0 +1,85 @@
+@media screen and (max-width: 1024px) {
+    /* NAVBAR */
+    .nav-links {
+        margin-right: 90px;
+    }
+
+    /*HEADER*/
+    #greeting {
+        padding-top: 25px;
+    }
+
+    #greeting h1 {
+        text-align: center;
+    }
+
+    #greeting p {
+        text-align: justify;
+    }
+
+    #greeting .row:nth-child(1) {
+        flex-direction: column-reverse;
+    }
+
+    #greeting .col {
+        width: 100%;
+    }
+
+    #greeting .col:nth-child(2) {
+        margin-top: 25px;
+    }
+
+    #greeting .col div {
+        width: 300px;
+        height: 300px;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .btn-resume {
+        margin-bottom: 30px;
+        width: 230px;
+        font-size: 22px;
+    }
+
+    /*ABOUT*/
+    #about .row:nth-child(2) {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .card {
+        width: 100%;
+        height: auto;
+        margin-bottom: 40px;
+    }
+
+    /*PROJECTS*/
+    .projects-container {
+        flex-direction: column;
+    }
+
+    .image-container img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 33px;
+    }
+
+    .project-description p {
+        text-align: justify;
+    }
+
+    /*CONTACT*/
+    input[type="text"] {
+        width: 100%;
+    }
+
+    #name {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    #email {
+        margin-left: 0;
+    }
+}

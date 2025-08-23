@@ -1,0 +1,383 @@
+/*Heebo font from fonts.google.com*/
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap");
+
+/*GENERAL STYLING*/
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+:root {
+    --main-color: #ffffff;
+    --secondary-color: #e4f4f8;
+    --accent-color: #ff6464;
+    --main-text-color: #21243d;
+    --secondary-text-color: #7b8997;
+    --button-text-color: #ffffff;
+    --main-family-font: "Heebo", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth; /*Creates smooth scrolling affect*/
+}
+
+body {
+    color: var(--main-text-color);
+    font-family: var(--main-family-font);
+}
+
+section {
+    padding: 20px 60px 30px;
+}
+
+h1 {
+    font-size: 58px;
+}
+
+h3 {
+    font-size: 34px;
+    margin-bottom: 5px;
+}
+
+h4 {
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1280px;
+    width: 90%;
+    margin: 0 auto;
+    background-color: var(--main-color);
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.col {
+    width: 50%;
+}
+
+/*NAVBAR*/
+.nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    height: 70px;
+    background-color: var(--secondary-color);
+    transition: height 0.3s ease-in;
+}
+
+.navbar-scrolled {
+    height: 50px;
+    background-color: rgba(228, 244, 248, 0.7);
+    backdrop-filter: blur(10px);
+    transition: height 0.3s ease-in;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.nav-links a {
+    position: relative;
+    display: block;
+    float: right;
+    margin: 5px 0 5px 25px;
+    padding: 10px 5px;
+    color: var(--main-text-color);
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+    transition: font-size 0.3s ease-in;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+    scale: 1.05;
+}
+
+.navbar-scrolled a {
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 0;
+    transition: font-size 0.3s ease-in;
+}
+
+/*HEADER*/
+#greeting {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(100vh - 70px);
+    scroll-margin-top: 70px;
+}
+
+#greeting .col div {
+    display: flex;
+    justify-content: end;
+}
+
+#greeting p {
+    font-size: 22px;
+}
+
+#greeting img {
+    position: relative;
+    z-index: 2;
+    left: 10px;
+    bottom: 20px;
+    width: 400px;
+    height: auto;
+}
+
+.img-background {
+    position: absolute;
+    z-index: 1;
+    right: -4px;
+    bottom: 4px;
+    width: 400px;
+    height: 400px;
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 50%;
+}
+
+.btn-resume {
+    display: inline-block;
+    width: 276px;
+    padding: 12px 0;
+    margin-top: 30px;
+    border-radius: 5px;
+    background-color: var(--accent-color);
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--button-text-color);
+    text-align: center;
+}
+
+/*ABOUT*/
+#about-section {
+    background-color: var(--secondary-color);
+    scroll-margin-top: 50px;
+}
+
+#about {
+    background-color: transparent;
+}
+
+#about .row {
+    justify-content: space-between;
+}
+
+.card {
+    width: 48.5%;
+    height: 500px;
+    background-color: var(--main-color);
+}
+
+.card h3 {
+    padding-top: 30px;
+    text-align: center;
+}
+
+.card p {
+    padding: 15px 30px 20px;
+    text-align: justify;
+}
+
+/*PROJECTS*/
+#projects {
+    scroll-margin-top: 50px;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 40px;
+    padding-bottom: 25px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+#first-project {
+    margin-bottom: 10px;
+}
+
+.image-container img {
+    display: block;
+    width: 426px;
+    height: 240px;
+    margin-right: 25px;
+    border-radius: 5px;
+}
+
+.project-description {
+    width: 100%;
+    padding-top: 0px;
+    padding-right: 10px;
+    margin-top: -13px;
+}
+
+.project-link {
+    position: relative;
+    color: var(--main-text-color);
+    text-decoration: none; /* Remove underline by default */
+    transition: color 0.3s ease;
+}
+
+.project-link::before {
+    content: "";
+    background: var(--secondary-text-color);
+    display: block;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 0;
+    height: 4px;
+    transition: width 0.3s ease-in-out;
+}
+
+.project-link:hover {
+    color: var(--secondary-text-color); /* Text turns black on hover */
+}
+
+.project-link:hover::before {
+    width: 100%; /* Blue underline appears */
+}
+
+.year {
+    margin-right: 20px;
+    padding: 0 17px;
+    background-color: #142850;
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+    color: var(--button-text-color);
+    font-weight: 600;
+}
+
+.tools {
+    font-size: 22px;
+    color: var(--secondary-text-color);
+}
+
+/*CONTACT FORM*/
+#contact-section {
+    background-color: var(--secondary-color);
+    scroll-margin-top: 50px;
+}
+
+#contact {
+    background-color: transparent;
+}
+
+/* Form element */
+form {
+    width: 100%;
+    border-radius: 5px; /* Rounds the corners of the contact form */
+    background-color: var(--main-color);
+    padding: 10px; /* Adds padding to the contact form */
+}
+
+/* input[type=text] targets all text input sections of the contact form */
+input[type="text"],
+textarea {
+    padding: 12px; /* Adds padding within the text box */
+    border: 1px solid #ccc; /* Setting a solid border and its color */
+    border-radius: 4px; /* Slightly rounds the corners of the text box border */
+    box-sizing: border-box; /* This creates a box with a border around the contact form input boxes */
+    resize: vertical; /* This allows the user to resize the text boxes vertically */
+    font-size: 21px;
+}
+
+input[type="text"] {
+    width: calc(50% - 18px); /* Each input box covers the full width of the container */
+}
+
+#name {
+    margin-right: 15px;
+}
+
+#email {
+    margin-left: 15px;
+}
+
+textarea {
+    width: 100%; /* Each input box covers the full width of the container */
+    margin: 30px 0 30px;
+    font-family: var(--main-family-font);
+}
+
+/* Hover effects for input boxes */
+input[type="text"]:hover,
+textarea:hover {
+    box-shadow: 0 0 5px #00004d inset; /* This creates a blue shadow in the text box when hovered over by the user */
+}
+
+input[type="text"]::placeholder,
+textarea::placeholder {
+    color: var(--secondary-text-color);
+}
+
+/* Submit button */
+input[type="submit"] {
+    display: block; /* Allows the submit button to be centered */
+    margin: 0 auto;
+    padding: 12px 25px; /* Adds padding to the submit button */
+    border: none; /* Removes the border from the submit button */
+    border-radius: 5px; /* Gives the submit button the same rounded corners as the text boxes */
+    cursor: pointer; /* Changes the cursor to pointer when over the submit button */
+    background-color: var(
+        --accent-color
+    ); /* Sets the background color of the submit button to black */
+    color: var(--button-text-color); /* Sets the font color of the Submit button to white */
+    font-size: 21px;
+    font-weight: 600; /* Makes the font of the submit button bold */
+    text-align: center;
+    font-family: var(--main-family-font);
+}
+
+/*FOOTER*/
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 160px;
+}
+
+.icons-container {
+    padding: 0 0 10px;
+}
+
+footer a {
+    display: inline-block;
+    margin: 0 24px;
+    font-size: 45px;
+    color: var(--main-text-color);
+}
+
+footer a:hover {
+    color: var(--accent-color);
+    scale: 1.15;
+    transition: scale 0.3 ease-out;
+}
