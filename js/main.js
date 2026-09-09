@@ -8,3 +8,9 @@ $(document).ready(function () {
         }
     });
 });
+
+// Dynamically update the year in the footer
+document.addEventListener("DOMContentLoaded", function () {
+    const currentYear = new Date().getFullYear();
+    document.getElementById("current-year").textContent = currentYear;
+});
